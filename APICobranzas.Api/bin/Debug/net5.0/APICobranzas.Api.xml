@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APICobranzas.Api</name>
+    </assembly>
+    <members>
+        <member name="M:APICobranzas.Api.Controllers.BancosController.Get">
+            <summary>
+            Devuelve la lista de bancos registrados
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.ContactosController.Get">
+            <summary>
+            Devuelve los tipos de contacto, es decir, el rol que ocupa la persona contactada para el cobro de facturas
+            </summary>
+            <returns></returns>
+            <response code="200">Resultado exitoso, hay al menos un contacto registrado</response>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.EstadosController.Get">
+            <summary>
+            Retorna los posibles estados de una factura. El valor por
+            defecto es el de id 1.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.EstadosController.Get(System.Int32)">
+            <summary>
+            Retorna un estado y las facturas asociadas al mismo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.FacturasController.Get">
+            <summary>
+            Obtiene la lista de todas las facturas registradas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.FacturasController.GetById(System.Int32)">
+            <summary>
+            Obtiene una factura de acuerdo a su clave primaria
+            </summary>
+            <param name="id"></param>
+            <returns>Retorna un objeto Factura con sus entidades relacionadas</returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.FacturasController.Post(APICobranzas.Application.Request.FacturaRequestModel)">
+             <summary>
+             Crea una factura, insertando los datos correspondientes
+             </summary>
+             <param name="factura">La factura a crear</param>
+             <returns></returns>
+            <response code="201">Creado Satisfactoriamente</response> 
+            <response code="400">Hay errores de validacion</response> 
+            <response code="401">La solicitud no esta autenticada</response> 
+            <response code="500">Error del servidor</response> 
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.FacturasController.Delete(System.Int32)">
+            <summary>
+            Elimina la factura, no recomendado
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.FacturasController.Anular(System.Int32)">
+            <summary>
+            Anula la factura indicada por su clave promaria
+            </summary>
+            <param name="id"></param>
+            <returns>anulado (true) o no anulado (false)</returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.FormasPagoController.Get">
+            <summary>
+            Devuelve una lista con las formas de pago disponibles cuando se emite un recibo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.GestionesController.Get(System.Int32)">
+            <summary>
+            Devuelve el detalle de las gestiones realizadas para poder cobrar las facturas de una obra social deudora
+            </summary>
+            <param name="obraSocialId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.GestionesController.GetPendientes">
+            <summary>
+            Obtiene la lista completa de gestiones pendientes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.GestionesController.GetById(System.Int32)">
+            <summary>
+            Devuelve una gestion por su clave primaria
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.GestionesController.Post(APICobranzas.Application.DTOs.Gestion.GestionRequest)">
+            <summary>
+            Agrega una nueva gestion para el cobro de facturas adeudadas
+            </summary>
+            <param name="gestion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.GestionesController.UpdateGestion(System.Int32,APICobranzas.Application.DTOs.Gestion.GestionRequest)">
+            <summary>
+            Modifica una gestion de cobranza especifica
+            </summary>
+            <param name="id"></param>
+            <param name="gestion"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.GestionesController.Delete(System.Int32)">
+            <summary>
+            Elimina una gestion de cobranza de facturas
+            </summary>
+            <param name="id">La clave primaria de la gestion</param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.NotasCreditoController.Get">
+            <summary>
+            Devuelve la lista completa de notas de credito
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.NotasCreditoController.GetById(System.Int32)">
+            <summary>
+            Devuelve una nota de credito segun su clave primaria, junto al detalle completo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.NotasCreditoController.Post(APICobranzas.Application.DTOs.NotaCredito.NotaCreditoRequest)">
+            <summary>
+            Crea una nota de credito, insertando los detalles y devuelve la nota creada, con datos completos
+            </summary>
+            <param name="nota"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.NotasCreditoController.Anular(System.Int32)">
+            <summary>
+            Anula una nota de credito indicando la clave primaria
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.ObraSocialController.Get">
+            <summary>
+            Devuelve un listado de las obras sociales
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.ObraSocialController.GetbyId(System.Int32)">
+            <summary>
+            Obtiene una obra social por su clave primaria
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.ObraSocialController.Post(APICobranzas.Application.Request.ObraSocialRequestModel)">
+            <summary>
+            Agrega una obra social
+            </summary>
+            <param name="obra">Datos de la obra social</param>
+            <returns>Obra social creada</returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.ObraSocialController.Put(System.Int32,APICobranzas.Application.Request.ObraSocialRequestModel)">
+            <summary>
+            Modifica una obra social
+            </summary>
+            <param name="id">Clave primaria de la obra social</param>
+            <param name="obra">Datos actualizados</param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.ObraSocialController.Delete(System.Int32)">
+            <summary>
+            Elimina una obra social indicando la clave primaria
+            </summary>
+            <param name="id">Clave primaria de la obra social</param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.RecibosController.Get">
+            <summary>
+            Obtiene la lista completa de recibos emitidos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.RecibosController.GetById(System.Int32)">
+            <summary>
+            Obtiene un recibo por su clave primaria, junto a las facturas asociadas
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.RecibosController.Post(APICobranzas.Application.Request.ReciboRequestModel)">
+            <summary>
+            Crea un recibo, incluyendo el detalle de facturas cobradas
+            </summary>
+            <param name="recibo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.RecibosController.Put(APICobranzas.Application.Request.ReciboRequestModel)">
+            <summary>
+            modifica un recibo
+            </summary>
+            <param name="recibo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.RecibosController.Delete(System.Int32)">
+            <summary>
+            Elimina un recibo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.RespuestasController.Get">
+            <summary>
+            Devuelve las distintas respuestas que pueden surgir al contactar a la obra social deudora
+            </summary>
+            <returns>Una lista de respuestas posibles</returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.TiposPrestadorController.Get">
+            <summary>
+            Muestrra la lista de tipos de prestador disponible
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.TiposPrestadorController.GetById(System.Int32)">
+            <summary>
+            Devuelve un tipo de prestador indicando su clave primaria, junto a los prestadores de ese tipo en particular
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.Login(APICobranzas.Application.DTOs.Account.LoginRequest)">
+            <summary>
+            Login de usuario, una vez ya registrado y verificado.
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.RefrescarToken">
+            <summary>
+            Renueva el token de acceso de un usuario ya autenticado
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.RevocarToken(APICobranzas.Application.DTOs.Account.RevocarTokenRequest)">
+            <summary>
+            Revoca o invalida el token actual del usuario autenticado
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.Registrar(APICobranzas.Application.DTOs.Account.RegistroRequest)">
+            <summary>
+            Registro de usuario
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.VerificarEmail(APICobranzas.Application.DTOs.Account.VerificarEmailRequest)">
+            <summary>
+            Verificacion del email pasado en el metodo "Registrar"
+            </summary>
+            <param name="model">Token recibido como parametro de url en el mail</param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.OlvidoPassword(APICobranzas.Application.DTOs.Account.OlvidoPasswordRequest)">
+            <summary>
+            Olvido de Password, envio de mail con instrucciones
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.ValidarTokenReinicio(APICobranzas.Application.DTOs.Account.ValidarTokenReinicioRequest)">
+            <summary>
+            Valida el Token de reinicio de contraseña que llega al correo
+            </summary>
+            <param name="model">Token enviado por correo electronico al usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.ReiniciarPassword(APICobranzas.Application.DTOs.Account.ReinicioPasswordRequest)">
+            <summary>
+            Reinicio de contraseña
+            </summary>
+            <param name="model">Password nueva</param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.GetUsuarios">
+            <summary>
+            Lista completa de usuarios. Solo el adminsitrador puede hacerlo.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.GetById(System.Int32)">
+            <summary>
+            Devuelve un usuario indicando su clave primaria. Solo se puede ver el usuario propio, excepto el administrador 
+            </summary>
+            <param name="id">Id de usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.CrearUsuario(APICobranzas.Application.DTOs.Account.CrearRequest)">
+            <summary>
+            Crea un usuario en el sistema, solo para administrador.
+            </summary>
+            <param name="model">Modelo de usuario a crear</param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.Modificar(System.Int32,APICobranzas.Application.DTOs.Account.ModificarUsuarioRequest)">
+            <summary>
+            Modifica el usuario propio,excepto el administrador que puede cambiar cualquier usuario
+            </summary>
+            <param name="id">Clave primaria del usuario</param>
+            <param name="model">Modelo con datos modificados del usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.UsuariosController.Eliminar(System.Int32)">
+            <summary>
+            Elimina un usuario, solamente el propio, a menos que lo haga un administrador
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

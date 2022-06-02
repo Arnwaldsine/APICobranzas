@@ -1,0 +1,12 @@
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\bin\Release\net5.0\APICobranzas.Domain.deps.json
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\bin\Release\net5.0\APICobranzas.Domain.dll
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\bin\Release\net5.0\ref\APICobranzas.Domain.dll
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\bin\Release\net5.0\APICobranzas.Domain.pdb
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\obj\Release\net5.0\APICobranzas.Domain.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\obj\Release\net5.0\APICobranzas.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\obj\Release\net5.0\APICobranzas.Domain.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\obj\Release\net5.0\APICobranzas.Domain.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\obj\Release\net5.0\APICobranzas.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\obj\Release\net5.0\APICobranzas.Domain.dll
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\obj\Release\net5.0\ref\APICobranzas.Domain.dll
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Domain\obj\Release\net5.0\APICobranzas.Domain.pdb

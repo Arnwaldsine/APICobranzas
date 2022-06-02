@@ -1,0 +1,15 @@
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\bin\Release\net5.0\APICobranzas.Application.deps.json
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\bin\Release\net5.0\APICobranzas.Application.dll
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\bin\Release\net5.0\ref\APICobranzas.Application.dll
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\bin\Release\net5.0\APICobranzas.Application.pdb
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\bin\Release\net5.0\APICobranzas.Domain.dll
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\bin\Release\net5.0\APICobranzas.Domain.pdb
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\obj\Release\net5.0\APICobranzas.Application.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\obj\Release\net5.0\APICobranzas.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\obj\Release\net5.0\APICobranzas.Application.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\obj\Release\net5.0\APICobranzas.Application.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\obj\Release\net5.0\APICobranzas.Application.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\obj\Release\net5.0\APICobranzas.Application.csproj.CopyComplete
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\obj\Release\net5.0\APICobranzas.Application.dll
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\obj\Release\net5.0\ref\APICobranzas.Application.dll
+C:\Users\Administrator\source\repos\APICobranzas\APICobranzas.Application\obj\Release\net5.0\APICobranzas.Application.pdb
