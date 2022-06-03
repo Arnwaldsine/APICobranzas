@@ -24,17 +24,17 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:APICobranzas.Api.Controllers.EstadosController.Get(System.Int32)">
-            <summary>
-            Retorna un estado y las facturas asociadas al mismo
-            </summary>
-            <param name="id"></param>
-            <returns></returns>
-        </member>
         <member name="M:APICobranzas.Api.Controllers.FacturasController.Get">
             <summary>
             Obtiene la lista de todas las facturas registradas
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:APICobranzas.Api.Controllers.FacturasController.GetByEstado(System.Int32)">
+            <summary>
+            Obtiene la lista de todas las facturas emitidas a una obra social, indicando su clave primeria
+            </summary>
+            <param name="id">Clave primaria de la obra social</param>
             <returns></returns>
         </member>
         <member name="M:APICobranzas.Api.Controllers.FacturasController.GetById(System.Int32)">

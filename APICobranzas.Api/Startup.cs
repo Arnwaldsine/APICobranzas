@@ -52,8 +52,8 @@ namespace APICobranzas.Api
             services.AddSingleton(mapper);
 
             services.AddDbContext<APIDbContext>(
-                options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
-            );
+                options => options.UseSqlite("Filename=Cobranzas.db"
+                ));
             services.AddScoped<IBancoService, BancoService>();
             services.AddScoped<IContactoService, ContactoService>();
             services.AddScoped<IEstadoService, EstadoService>();

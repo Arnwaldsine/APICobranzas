@@ -11,9 +11,9 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "Bancos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Nombre = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -24,9 +24,9 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "Contactos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Tipo = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Tipo = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -37,9 +37,9 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "Estados",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Detalle = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Detalle = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -50,9 +50,9 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "FormasPago",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Forma = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Forma = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -63,10 +63,10 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "IdentityRole",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    NormalizedName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    NormalizedName = table.Column<string>(type: "TEXT", nullable: true),
+                    ConcurrencyStamp = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -77,10 +77,10 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "PuntosVenta",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Numero = table.Column<int>(type: "int", nullable: false),
-                    Punto = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Numero = table.Column<int>(type: "INTEGER", nullable: false),
+                    Punto = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -91,9 +91,9 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "Respuestas",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Detalle = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Detalle = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -104,9 +104,9 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "TiposPrestador",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Tipo = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Tipo = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -117,13 +117,13 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "NotasCredito",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Fecha = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Total = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Anulado = table.Column<bool>(type: "bit", nullable: false),
-                    Observaciones = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PuntoVentaId = table.Column<int>(type: "int", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Fecha = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    Total = table.Column<decimal>(type: "TEXT", nullable: false),
+                    Anulado = table.Column<bool>(type: "INTEGER", nullable: false),
+                    Observaciones = table.Column<string>(type: "TEXT", nullable: true),
+                    PuntoVentaId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -140,13 +140,13 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "Recibos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Total = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Total = table.Column<decimal>(type: "TEXT", precision: 10, scale: 2, nullable: false),
                     Fecha = table.Column<DateTime>(type: "smalldatetime", nullable: false),
-                    Anulado = table.Column<bool>(type: "bit", nullable: false),
-                    Observaciones = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PuntoVentaId = table.Column<int>(type: "int", nullable: true)
+                    Anulado = table.Column<bool>(type: "INTEGER", nullable: false),
+                    Observaciones = table.Column<string>(type: "TEXT", nullable: true),
+                    PuntoVentaId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -163,22 +163,22 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "Usuarios",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    PuntoVentaId = table.Column<int>(type: "int", nullable: false),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Apellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AceptaTerminos = table.Column<bool>(type: "bit", nullable: false),
-                    Rol = table.Column<int>(type: "int", nullable: false),
-                    TokenDeVerificacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    FechaVerificion = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    TokenReinicio = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    FechaExpiracionTokenReseteo = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    FechaReseteoPassword = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Creado = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Actualizado = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    PuntoVentaId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Nombre = table.Column<string>(type: "TEXT", nullable: true),
+                    Apellido = table.Column<string>(type: "TEXT", nullable: true),
+                    Email = table.Column<string>(type: "TEXT", nullable: true),
+                    PasswordHash = table.Column<string>(type: "TEXT", nullable: true),
+                    AceptaTerminos = table.Column<bool>(type: "INTEGER", nullable: false),
+                    Rol = table.Column<int>(type: "INTEGER", nullable: false),
+                    TokenDeVerificacion = table.Column<string>(type: "TEXT", nullable: true),
+                    FechaVerificion = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    TokenReinicio = table.Column<string>(type: "TEXT", nullable: true),
+                    FechaExpiracionTokenReseteo = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    FechaReseteoPassword = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    Creado = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Actualizado = table.Column<DateTime>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -195,25 +195,25 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "ObrasSociales",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Rnos = table.Column<long>(type: "bigint", nullable: false),
-                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Cuit = table.Column<long>(type: "bigint", nullable: false),
-                    Tel = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CP = table.Column<long>(type: "bigint", nullable: false),
-                    Pagina = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    HorarioAdmin = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ContactoAdmin1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ContactoAdmin2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TelAdmin = table.Column<long>(type: "bigint", nullable: true),
-                    ContactoGeren1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ContactoGeren2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TelGeren = table.Column<long>(type: "bigint", nullable: true),
-                    Mailgeren = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Observaciones = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TipoPrestadorId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Rnos = table.Column<uint>(type: "INTEGER", nullable: false),
+                    Nombre = table.Column<string>(type: "TEXT", nullable: false),
+                    Cuit = table.Column<uint>(type: "INTEGER", nullable: false),
+                    Tel = table.Column<string>(type: "TEXT", nullable: true),
+                    Direccion = table.Column<string>(type: "TEXT", nullable: true),
+                    CP = table.Column<uint>(type: "INTEGER", nullable: false),
+                    Pagina = table.Column<string>(type: "TEXT", nullable: true),
+                    HorarioAdmin = table.Column<string>(type: "TEXT", nullable: true),
+                    ContactoAdmin1 = table.Column<string>(type: "TEXT", nullable: true),
+                    ContactoAdmin2 = table.Column<string>(type: "TEXT", nullable: true),
+                    TelAdmin = table.Column<uint>(type: "INTEGER", nullable: true),
+                    ContactoGeren1 = table.Column<string>(type: "TEXT", nullable: true),
+                    ContactoGeren2 = table.Column<string>(type: "TEXT", nullable: true),
+                    TelGeren = table.Column<uint>(type: "INTEGER", nullable: true),
+                    Mailgeren = table.Column<string>(type: "TEXT", nullable: true),
+                    Observaciones = table.Column<string>(type: "TEXT", nullable: true),
+                    TipoPrestadorId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -230,16 +230,16 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "RefreshToken",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    AccountId = table.Column<int>(type: "int", nullable: false),
-                    Token = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Expires = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedByIp = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Revoked = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    RevokedByIp = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ReplacedByToken = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    AccountId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Token = table.Column<string>(type: "TEXT", nullable: true),
+                    Expires = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Created = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    CreatedByIp = table.Column<string>(type: "TEXT", nullable: true),
+                    Revoked = table.Column<DateTime>(type: "TEXT", nullable: true),
+                    RevokedByIp = table.Column<string>(type: "TEXT", nullable: true),
+                    ReplacedByToken = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -256,19 +256,19 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "Facturas",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nro = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ObraSocialId = table.Column<int>(type: "int", nullable: false),
-                    PuntoventaId = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Nro = table.Column<string>(type: "TEXT", nullable: true),
+                    ObraSocialId = table.Column<int>(type: "INTEGER", nullable: false),
+                    PuntoventaId = table.Column<int>(type: "INTEGER", nullable: false),
                     FechaEmision = table.Column<DateTime>(type: "smalldatetime", nullable: false, defaultValueSql: "getdate()"),
                     FechaUltPago = table.Column<DateTime>(type: "smalldatetime", nullable: true),
                     FechaAcuse = table.Column<DateTime>(type: "smalldatetime", nullable: true, defaultValueSql: "getdate()"),
-                    ImporteDebe = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false, computedColumnSql: "[ImporteFactura] - [ImporteCobrado]", stored: true),
-                    ImporteFactura = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
-                    ImporteCobrado = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false),
-                    EstadoId = table.Column<int>(type: "int", nullable: true),
-                    Observacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    ImporteDebe = table.Column<decimal>(type: "TEXT", precision: 10, scale: 2, nullable: false, computedColumnSql: "[ImporteFactura] - [ImporteCobrado]", stored: true),
+                    ImporteFactura = table.Column<decimal>(type: "TEXT", precision: 10, scale: 2, nullable: false),
+                    ImporteCobrado = table.Column<decimal>(type: "TEXT", precision: 10, scale: 2, nullable: false),
+                    EstadoId = table.Column<int>(type: "INTEGER", nullable: true),
+                    Observacion = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -297,15 +297,15 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "Gestiones",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ObraSocialId = table.Column<int>(type: "int", nullable: false),
-                    ContactoId = table.Column<int>(type: "int", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    ObraSocialId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ContactoId = table.Column<int>(type: "INTEGER", nullable: false),
                     FechaContacto = table.Column<DateTime>(type: "smalldatetime", nullable: false),
-                    RespuestaId = table.Column<int>(type: "int", nullable: false),
+                    RespuestaId = table.Column<int>(type: "INTEGER", nullable: false),
                     FechaProxContacto = table.Column<DateTime>(type: "smalldatetime", nullable: true),
-                    AccountId = table.Column<int>(type: "int", nullable: false),
-                    Observacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    AccountId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Observacion = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -340,10 +340,10 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "FacturaNota",
                 columns: table => new
                 {
-                    FacturaId = table.Column<int>(type: "int", nullable: false),
-                    NotaCreditoId = table.Column<int>(type: "int", nullable: false),
-                    FormaPagoId = table.Column<int>(type: "int", nullable: false),
-                    Subtotal = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false)
+                    FacturaId = table.Column<int>(type: "INTEGER", nullable: false),
+                    NotaCreditoId = table.Column<int>(type: "INTEGER", nullable: false),
+                    FormaPagoId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Subtotal = table.Column<decimal>(type: "TEXT", precision: 10, scale: 2, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -372,13 +372,13 @@ namespace APICobranzas.Infra.Data.Migrations
                 name: "FacturaRecibo",
                 columns: table => new
                 {
-                    FacturaId = table.Column<int>(type: "int", nullable: false),
-                    ReciboId = table.Column<int>(type: "int", nullable: false),
-                    FormaPagoId = table.Column<int>(type: "int", nullable: false),
-                    NroChequeTransf = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    NroReciboTes = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BancoId = table.Column<int>(type: "int", nullable: false),
-                    SubTotal = table.Column<decimal>(type: "decimal(10,2)", precision: 10, scale: 2, nullable: false)
+                    FacturaId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ReciboId = table.Column<int>(type: "INTEGER", nullable: false),
+                    FormaPagoId = table.Column<int>(type: "INTEGER", nullable: false),
+                    NroChequeTransf = table.Column<string>(type: "TEXT", nullable: false),
+                    NroReciboTes = table.Column<string>(type: "TEXT", nullable: false),
+                    BancoId = table.Column<int>(type: "INTEGER", nullable: false),
+                    SubTotal = table.Column<decimal>(type: "TEXT", precision: 10, scale: 2, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -412,12 +412,12 @@ namespace APICobranzas.Infra.Data.Migrations
             migrationBuilder.InsertData(
                 table: "IdentityRole",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "63740121-4bc9-4112-aae7-c30f057a60f2", "5757a9e9-ee61-41ac-b75d-317f6d229d84", "Usuario", "USUARIO" });
+                values: new object[] { "5816c74e-5626-4d6f-9a9e-9ef8009893eb", "2d61343e-10ff-47f3-a5b1-fa8701a7a132", "Usuario", "USUARIO" });
 
             migrationBuilder.InsertData(
                 table: "IdentityRole",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "cdd829da-0284-4755-8bab-be105d1f9658", "2b3d13cb-a8b1-41e0-aabd-6d647be52c74", "Administrador", "ADMINISTRADOR" });
+                values: new object[] { "d738d8e0-9586-4c5b-ac4e-1138e80a3601", "b83693be-2a74-4915-9a4c-6f89824e2c01", "Administrador", "ADMINISTRADOR" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_FacturaNota_FormaPagoId",

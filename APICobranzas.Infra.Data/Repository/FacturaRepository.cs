@@ -52,7 +52,7 @@ namespace APICobranzas.Infra.Data.Repository
             factura.ImporteCobrado = 0;
             
             var entity=  await  _context.Facturas.AddAsync(factura);
-            await _context.SaveChangesAsync();
+              await _context.SaveChangesAsync();
             var completa = await GetFactura(entity.Entity.Id);
              completa.Nro = $"{completa.PuntoVenta.Numero.ToString()?.PadLeft(4, '0')}-{completa.Id.ToString().PadLeft(8, '0')}";
             await _context.SaveChangesAsync();
